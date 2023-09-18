@@ -33,7 +33,7 @@
 // %EndTag(MSG_HEADER)%
 
 #include <sstream>
-
+#include "publisher_package/topic_name.h"
 /**
  * This tutorial demonstrates simple sending of messages over the ROS system.
  */
@@ -80,7 +80,7 @@ int main(int argc, char **argv)
      * buffer up before throwing some away.
      */
 // %Tag(PUBLISHER)%
-    ros::Publisher chatter_pub = n.advertise<std_msgs::String>("publisher_topic", 1000);
+    ros::Publisher chatter_pub = n.advertise<std_msgs::String>(topic_name, 1000);
 // %EndTag(PUBLISHER)%
 
 // %Tag(LOOP_RATE)%
